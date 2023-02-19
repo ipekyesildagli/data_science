@@ -1,0 +1,17 @@
+How many missing data points do we have?
+
+# get the number of missing data points per column
+missing_values_count = nfl_data.isnull().sum()
+
+# look at the # of missing points in the first ten columns
+missing_values_count[0:10]
+
+def missing(df):
+    print(df.isnull().sum()/len(df))
+    
+missing_values_count = education.isnull().sum()
+total_cells = np.product(education.shape)
+total_missing = missing_values_count.sum()
+percent_missing = (total_missing/total_cells) * 100
+
+percent_missing
